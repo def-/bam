@@ -13,7 +13,7 @@ function DriverGCC_Get(exe, cache_name, flags_name)
 			local f = cc.flags:ToString()
 			f = f .. cc[flags_name]:ToString()
 			if settings.debug > 0 then f = f .. "-g " end
-			if settings.optimize > 0 then f = f .. "-O3 " end
+			if settings.optimize > 0 then f = f .. "-O2 " end
 			
 			cache.str = cc[exe] .. " " .. f .. "-c " .. d .. i .. " -o "
 		end
